@@ -2,7 +2,7 @@
   <UContainer class="mb-4 sm:mb-10">
     <header>
       <nav class="flex justify-between items-center py-8">
-        <ULink to="/" class="site-name text-2xl">KellyBaderArt</ULink>
+        <ULink to="/" class="site-name text-2xl">Kelly Bader Art</ULink>
         <button>
           <UIcon
             name="i-heroicons-bars-3"
@@ -35,10 +35,16 @@
             >
           </div>
         </USlideover>
-        <div class="link-container hidden md:flex">
-          <ULink to="/" active-class="text-primary">Gallery</ULink>
-          <ULink to="/about" active-class="text-primary">About</ULink>
-          <ULink to="/contact" active-class="text-primary">Contact</ULink>
+        <div class="text-xs link-container hidden md:flex">
+          <ULink class="header-link" to="/" active-class="active"
+            >Gallery</ULink
+          >
+          <ULink class="header-link" to="/about" active-class="active"
+            >About</ULink
+          >
+          <ULink class="header-link" to="/contact" active-class="active"
+            >Contact</ULink
+          >
           <div class="flex pl-4">
             <a
               target="_blank"
@@ -77,9 +83,14 @@ export default {
 </script>
 
 <style>
-.text-primary {
-  text-decoration: underline;
+.active {
+  border-bottom: 1px solid black;
 }
+
+.header-link {
+  padding: 0.1em 0;
+}
+
 .icon-button-container {
   align-items: center;
   justify-content: center;
