@@ -12,13 +12,25 @@
         </button>
         <USlideover class="flex sm:hidden slideover" v-model="menuVisible">
           <div class="link-container">
-            <ULink @click="toggleMenu" to="/" active-class="text-primary"
+            <ULink
+              class="text-xl pb-4"
+              @click="toggleMenu"
+              to="/"
+              active-class="text-primary"
               >Gallery</ULink
             >
-            <ULink @click="toggleMenu" to="/about" active-class="text-primary"
+            <ULink
+              class="text-xl pb-4"
+              @click="toggleMenu"
+              to="/about"
+              active-class="text-primary"
               >About</ULink
             >
-            <ULink @click="toggleMenu" to="/contact" active-class="text-primary"
+            <ULink
+              class="text-xl pb-4"
+              @click="toggleMenu"
+              to="/contact"
+              active-class="text-primary"
               >Contact</ULink
             >
           </div>
@@ -65,6 +77,9 @@ export default {
 </script>
 
 <style>
+.text-primary {
+  text-decoration: underline;
+}
 .icon-button-container {
   align-items: center;
   justify-content: center;

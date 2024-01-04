@@ -16,7 +16,7 @@
     <UContainer
       class="md:w-1/2 w-full mb-8 text-center flex flex-col items-center"
     >
-      <h1 class="text-4xl font-bold mb-4">Kelly Bader</h1>
+      <h1 class="text-4xl font-bold mb-4">About Me</h1>
       <p class="text-lg max-w-xl">ect ect ect ect...</p>
     </UContainer>
   </div>

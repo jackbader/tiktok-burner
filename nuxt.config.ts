@@ -14,4 +14,9 @@ export default defineNuxtConfig({
   ui: {
     icons: ["heroicons", "fa-brands"],
   },
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/png", href: "/favicon-32x32.png" }],
+    },
+  },
 });
