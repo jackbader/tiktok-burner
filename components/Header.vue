@@ -6,11 +6,11 @@
         <button>
           <UIcon
             name="i-heroicons-bars-3"
-            class="flex sm:hidden w-[40px] h-[40px] hover:cursor-pointer"
+            class="flex md:hidden w-[40px] h-[40px] hover:cursor-pointer"
             @click="toggleMenu"
           />
         </button>
-        <USlideover class="flex sm:hidden slideover" v-model="menuVisible">
+        <USlideover class="flex md:hidden slideover" v-model="menuVisible">
           <div class="link-container">
             <ULink
               class="text-xl pb-4"
@@ -35,7 +35,7 @@
             >
           </div>
         </USlideover>
-        <div class="link-container hidden sm:flex">
+        <div class="link-container hidden md:flex">
           <ULink to="/" active-class="text-primary">Gallery</ULink>
           <ULink to="/about" active-class="text-primary">About</ULink>
           <ULink to="/contact" active-class="text-primary">Contact</ULink>
@@ -95,7 +95,7 @@ export default {
   height: 100%;
 }
 .link-container a {
-  margin: 0px 10px;
+  margin: 0px 20px;
 }
 
 .slideover div:nth-child(2) {
