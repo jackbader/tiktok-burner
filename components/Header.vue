@@ -1,5 +1,5 @@
 <template>
-  <UContainer>
+  <UContainer class="mb-4 sm:mb-10">
     <header>
       <nav class="flex justify-between items-center py-8">
         <ULink to="/" class="site-name text-2xl">KellyBaderArt</ULink>
@@ -102,9 +102,5 @@ export default {
   /* CSS properties for the second div inside .slideover */
   width: 80%;
   flex: none;
-}
-
-.i-heroicons-bars-3 {
-  margin: 0px 10px;
 }
 </style>
