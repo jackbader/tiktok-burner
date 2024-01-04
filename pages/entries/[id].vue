@@ -14,7 +14,17 @@
       v-if="entry"
       class="md:w-1/2 w-full mb-8 text-center flex flex-col items-center"
     >
-      <h1 class="text-4xl font-bold mb-4">{{ entry.title }}</h1>
+      <h1 class="text-4xl font-bold mb-2">{{ entry.title }}</h1>
+
+      <div class="text-sm text-gray-500">
+        <p class="">{{ entry.medium }}</p>
+        <p class="mb-4">{{ entry.size }}</p>
+      </div>
+
+      <p v-if="entry.price" class="mb-4">
+        ${{ formattedPrice }} (plus shipping)
+      </p>
+
       <p class="text-sm max-w-xl">{{ entry.description }}</p>
     </UContainer>
   </div>
@@ -27,7 +37,13 @@ const route = useRoute();
 const space_id = "d5s99grcg5ef";
 const access_token = "IZUu2t0zLR-AENZLJs8nBm3pAEkUX1Wn15qFAwHFJgM";
 const id = route.params.id;
-console.log("id", id);
+
+const formattedPrice = computed(() => {
+  if (entry.value) {
+    return new Intl.NumberFormat().format(entry.value.price);
+  }
+  return "";
+});
 
 const { data: entry } = useAsyncData(`entry:${route.params.id}`, async () => {
   const response = await axios.get(
@@ -54,10 +70,11 @@ const { data: entry } = useAsyncData(`entry:${route.params.id}`, async () => {
 
   const imageUrl = imageResponse.data.fields.file.url;
 
-  console.log("response.data.fields", response.data.fields);
-
   const entry = {
     title: response.data.fields.title,
+    medium: response.data.fields.medium,
+    size: response.data.fields.size,
+    price: response.data.fields.price,
     description: response.data.fields.description,
     imageUrl: `https:${imageUrl}`,
   };

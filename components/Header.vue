@@ -2,7 +2,7 @@
   <UContainer class="mb-4 sm:mb-10">
     <header>
       <nav class="flex justify-between items-center py-8">
-        <ULink to="/" class="site-name text-2xl">Kelly Bader Art</ULink>
+        <ULink to="/" class="site-name text-2xl">KellyBaderArt</ULink>
         <button class="md:hidden">
           <UIcon
             name="i-heroicons-bars-3"
