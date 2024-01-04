@@ -35,7 +35,7 @@
             >
           </div>
         </USlideover>
-        <div class="text-xs link-container hidden md:flex">
+        <div class="text-md link-container hidden md:flex">
           <ULink class="header-link" to="/" active-class="active"
             >Gallery</ULink
           >
@@ -51,14 +51,14 @@
               href="https://www.instagram.com/kellybaderart"
               class="icon-button-container"
             >
-              <UIcon name="i-fa-brands-instagram" />
+              <UIcon dynamic name="i-fa-brands-instagram" />
             </a>
             <a
               target="_blank"
               href="https://www.facebook.com/p/Kelly-Bader-Art-100039086319756"
               class="icon-button-container"
             >
-              <UIcon name="i-fa-brands-facebook-f" />
+              <UIcon dynamic name="i-fa-brands-facebook-f" />
             </a>
           </div>
         </div>
