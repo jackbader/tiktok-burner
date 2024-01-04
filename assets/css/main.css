@@ -1,0 +1,3 @@
+button:focus-visible {
+  outline-color: rgb(var(--color-primary-DEFAULT) / 1);
+}
