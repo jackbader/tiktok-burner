@@ -3,31 +3,31 @@
     <header>
       <nav class="flex justify-between items-center py-8">
         <ULink to="/" class="site-name text-2xl">Kelly Bader Art</ULink>
-        <button>
+        <button class="md:hidden">
           <UIcon
             name="i-heroicons-bars-3"
-            class="flex md:hidden w-[40px] h-[40px] hover:cursor-pointer"
+            class="flex w-[40px] h-[40px] hover:cursor-pointer"
             @click="toggleMenu"
           />
         </button>
         <USlideover class="flex md:hidden slideover" v-model="menuVisible">
           <div class="link-container">
             <ULink
-              class="text-xl pb-4"
+              class="text-xl"
               @click="toggleMenu"
               to="/"
               active-class="text-primary"
               >Gallery</ULink
             >
             <ULink
-              class="text-xl pb-4"
+              class="text-xl"
               @click="toggleMenu"
               to="/about"
               active-class="text-primary"
               >About</ULink
             >
             <ULink
-              class="text-xl pb-4"
+              class="text-xl"
               @click="toggleMenu"
               to="/contact"
               active-class="text-primary"
@@ -106,7 +106,7 @@ export default {
   height: 100%;
 }
 .link-container a {
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
 .slideover div:nth-child(2) {
