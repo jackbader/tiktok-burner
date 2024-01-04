@@ -8,7 +8,7 @@
       />
       <img
         class="w-2/3 absolute right-0 top-10"
-        src="/imgs/portrait.jpg"
+        src="/imgs/portrait.png"
         alt="KellyBaderArt: About Me"
       />
     </div>
