@@ -21,9 +21,15 @@
         <p class="mb-4">{{ entry.size }}</p>
       </div>
 
-      <p v-if="entry.price" class="mb-4">
-        ${{ formattedPrice }} (plus shipping)
-      </p>
+      <div class="flex flex-row">
+        <p
+          v-if="entry.price"
+          :class="{ 'line-through red-line-through': entry.sold, 'mb-4': true }"
+        >
+          ${{ formattedPrice }} (plus shipping)
+        </p>
+        <p v-if="entry.sold" class="ml-2 text-red-500 mb-4">SOLD</p>
+      </div>
 
       <p class="text-sm max-w-xl">{{ entry.description }}</p>
     </UContainer>
@@ -76,6 +82,7 @@ const { data: entry } = useAsyncData(`entry:${route.params.id}`, async () => {
     size: response.data.fields.size,
     price: response.data.fields.price,
     description: response.data.fields.description,
+    sold: response.data.fields.sold,
     imageUrl: `https:${imageUrl}`,
   };
 
@@ -92,3 +99,9 @@ const links = computed(() => [
   },
 ]);
 </script>
+
+<style>
+.red-line-through {
+  text-decoration-color: red;
+}
+</style>
