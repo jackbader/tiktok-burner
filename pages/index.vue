@@ -13,7 +13,18 @@
           class="w-full h-full object-contain"
         />
       </div>
-      <h2 class="text-lg text-center mt-4">{{ entry.title }}</h2>
+      <h2 class="text-lg text-center mt-4 flex items-center justify-center">
+        <span
+          :class="{
+            'line-through': entry.sold,
+            'red-line-through': entry.sold,
+          }"
+        >
+          {{ entry.title }}
+        </span>
+        <span v-if="entry.sold" class="text-red-500 ml-2">SOLD</span>
+        <span class="ml-2"> ></span>
+      </h2>
     </NuxtLink>
   </div>
 </template>
@@ -61,6 +72,7 @@ const { data: entries } = await useAsyncData("entries", async () => {
         description: item.fields.description,
         imageUrl: `https:${imageUrl}`,
         id: item.sys.id,
+        sold: item.fields.sold,
       };
     });
 
@@ -100,10 +112,14 @@ const links = [
 </script>
 
 <style scoped>
+.red-line-through {
+  text-decoration-color: red;
+}
 .aspect-content {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
+  background-color: antiquewhite;
 }
 .aspect-content > * {
   position: absolute;
