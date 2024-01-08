@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Poppins: true,
+      Poppins: "200...900",
     },
   },
   ui: {

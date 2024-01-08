@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col-reverse md:flex-row">
     <div class="md:w-1/2 w-full relative">
-      <img
+      <!-- <img
         class="w-2/3 absolute left-0"
         src="/imgs/mountains.jpg"
         alt="KellyBaderArt: Boulder Colorado"
-      />
+      /> -->
       <img
-        class="w-2/3 absolute right-0 top-10"
+        class="w-full absolute"
         src="/imgs/portrait.png"
         alt="KellyBaderArt: About Me"
       />
@@ -36,6 +36,11 @@
         husband and her ornery rescue dog, Max and her princess, Penelope, a
         King Charles Cavalier. She loves hiking everyday with her dogs, curling
         up with a book and binging the latest shows with her husband.
+        <br /><br />
+        <strong class="font-semibold">
+          Commissions welcomed. Please contact me if I can create something
+          colorful for you.
+        </strong>
       </p>
     </UContainer>
   </div>
