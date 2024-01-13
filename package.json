@@ -21,6 +21,7 @@
     "@nuxt/ui": "^2.11.1",
     "@vercel/speed-insights": "^1.0.2",
     "contentful": "^10.6.15",
-    "mailgun-js": "^0.22.0"
+    "mailgun-js": "^0.22.0",
+    "replicate": "^0.25.2"
   }
 }

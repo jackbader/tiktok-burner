@@ -1,11 +1,7 @@
 <template>
   <div class="flex flex-col-reverse md:flex-row">
-    <div class="md:w-1/2 w-full relative">
-      <!-- <img
-        class="w-2/3 absolute left-0"
-        src="/imgs/mountains.jpg"
-        alt="KellyBaderArt: Boulder Colorado"
-      /> -->
+    <h1 class="text-4xl mb-4">About</h1>
+    <!-- <div class="md:w-1/2 w-full relative">
       <img
         class="w-full absolute"
         src="/imgs/portrait.png"
@@ -42,6 +38,6 @@
           colorful for you.
         </strong>
       </p>
-    </UContainer>
+    </UContainer> -->
   </div>
 </template>

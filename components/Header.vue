@@ -2,7 +2,7 @@
   <UContainer class="mb-4 sm:mb-10">
     <header>
       <nav class="flex justify-between items-center py-8">
-        <ULink to="/" class="site-name text-2xl">KellyBaderArt</ULink>
+        <ULink to="/" class="site-name text-2xl">TikTok Caption Burner</ULink>
         <button class="md:hidden">
           <UIcon
             name="i-heroicons-bars-3"
@@ -17,7 +17,7 @@
               @click="toggleMenu"
               to="/"
               active-class="text-primary"
-              >Gallery</ULink
+              >Home</ULink
             >
             <ULink
               class="text-xl"
@@ -36,16 +36,14 @@
           </div>
         </USlideover>
         <div class="text-md link-container hidden md:flex">
-          <ULink class="header-link" to="/" active-class="active"
-            >Gallery</ULink
-          >
+          <ULink class="header-link" to="/" active-class="active">Home</ULink>
           <ULink class="header-link" to="/about" active-class="active"
             >About</ULink
           >
           <ULink class="header-link" to="/contact" active-class="active"
             >Contact</ULink
           >
-          <div class="flex pl-4">
+          <!-- <div class="flex pl-4">
             <a
               target="_blank"
               href="https://www.instagram.com/kellybaderart"
@@ -60,7 +58,7 @@
             >
               <UIcon dynamic name="i-fa-brands-facebook-f" />
             </a>
-          </div>
+          </div> -->
         </div>
       </nav>
     </header>
