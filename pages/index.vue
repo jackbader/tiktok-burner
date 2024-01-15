@@ -41,20 +41,29 @@
 
   <div
     v-if="state.transcription"
-    v-for="(segment, index) in state.transcription.segments"
+    v-for="(segment, segmentIndex) in state.transcription.segments"
     :key="index"
   >
-    <h3 class="font-bold mb-2">Segment {{ index + 1 }}</h3>
+    <h3 class="font-bold mb-2">Segment {{ segmentIndex + 1 }}</h3>
 
     <!-- Loop over each word in the segment -->
     <div
-      class="flex"
+      class="flex items-center"
       v-for="(word, wordIndex) in segment.words"
       :key="wordIndex"
     >
       <UInput v-model="word.text" class="mr-2 mb-1" />
-      <p class="mr-2">Start time: {{ word.start }}</p>
-      <p>End time: {{ word.end }}</p>
+      <div class="flex items-center">
+        <p>Start time:</p>
+        <UInput type="number" v-model="word.start" class="mr-2 mb-1 ml-2" />
+      </div>
+      <div class="flex items-center">
+        <p>End time:</p>
+        <UInput type="number" v-model="word.end" class="mr-2 mb-1 ml-2" />
+      </div>
+      <UButton @click="removeWord(wordIndex, segmentIndex)" class="ml-2">
+        <UIcon dynamic name="i-heroicons-trash" />
+      </UButton>
     </div>
   </div>
 
@@ -87,6 +96,11 @@ const state = reactive({
   gettingBurntVideo: false,
   transcription: null,
 });
+
+function removeWord(wordIndex, segmentIndex) {
+  // remove word from segment
+  state.transcription.segments[segmentIndex].words.splice(wordIndex, 1);
+}
 
 async function onSubmit(event) {
   // Handle form submission here
