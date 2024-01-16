@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   pages: true,
+  nitro: {
+    vercel: {
+      functions: {
+        maxDuration: 300,
+        memory: 1024,
+      },
+    },
+  },
   modules: [
     "@nuxt/ui",
     "@nuxtjs/google-fonts",
