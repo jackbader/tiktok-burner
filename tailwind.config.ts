@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 export default <Partial<Config>>{
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -9,17 +10,17 @@ export default <Partial<Config>>{
       },
       colors: {
         green: {
-          "50": "#f4f7f7",
-          "100": "#e2ebeb",
-          "200": "#c8d9d9",
-          "300": "#a2bebd",
-          "400": "#749b9c",
-          "500": "#598081",
-          "600": "#527375",
-          "700": "#425a5c",
-          "800": "#3c4c4e",
-          "900": "#354244",
-          "950": "#202b2c",
+          50: "#EFFDF5",
+          100: "#D9FBE8",
+          200: "#B3F5D1",
+          300: "#75EDAE",
+          400: "#00DC82",
+          500: "#00C16A",
+          600: "#00A155",
+          700: "#007F45",
+          800: "#016538",
+          900: "#0A5331",
+          950: "#052e16",
         },
       },
     },

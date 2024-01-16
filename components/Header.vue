@@ -43,40 +43,39 @@
           <ULink class="header-link" to="/contact" active-class="active"
             >Contact</ULink
           >
-          <!-- <div class="flex pl-4">
-            <a
-              target="_blank"
-              href="https://www.instagram.com/kellybaderart"
-              class="icon-button-container"
-            >
-              <UIcon dynamic name="i-fa-brands-instagram" />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.facebook.com/p/Kelly-Bader-Art-100039086319756"
-              class="icon-button-container"
-            >
-              <UIcon dynamic name="i-fa-brands-facebook-f" />
-            </a>
-          </div> -->
+
+          <UButton
+            :icon="
+              isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
+            "
+            color="gray"
+            variant="ghost"
+            aria-label="Theme"
+            @click="isDark = !isDark"
+          />
         </div>
       </nav>
     </header>
   </UContainer>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      menuVisible: false,
-    };
+<script setup>
+import { ref } from "vue";
+
+const colorMode = useColorMode();
+const isDark = computed({
+  get() {
+    return colorMode.value === "dark";
   },
-  methods: {
-    toggleMenu() {
-      this.menuVisible = !this.menuVisible;
-    },
+  set() {
+    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
   },
+});
+
+const menuVisible = ref(false);
+
+const toggleMenu = () => {
+  menuVisible.value = !menuVisible.value;
 };
 </script>
 

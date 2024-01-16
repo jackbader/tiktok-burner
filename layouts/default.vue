@@ -28,10 +28,10 @@ useHead({
 
 <template>
   <SpeedInsights />
-  <div>
-    <Header />
-    <UContainer>
-      <slot />
-    </UContainer>
-  </div>
+
+  <Header />
+
+  <UContainer>
+    <slot />
+  </UContainer>
 </template>
