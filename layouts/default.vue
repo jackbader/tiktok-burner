@@ -1,37 +1,33 @@
-<script>
+<script setup>
 import "assets/css/main.css";
-export default {
+import { SpeedInsights } from "@vercel/speed-insights/vue";
+
+useHead({
   head: {
-    title: "KellyBaderArt",
+    title: "Caption Burner",
     meta: [
       {
-        hid: "description",
         name: "description",
-        content: "Creating colorful pieces to brighten your world",
+        content: "Caption Burner",
       },
-      { hid: "og:title", property: "og:title", content: "KellyBaderArt" },
+      { name: "og:url", content: "https://captionburn.com" },
+      { name: "og:title", content: "Caption Burn" },
       {
-        hid: "og:description",
-        property: "og:description",
-        content: "Creating colorful pieces to brighten your world",
+        name: "og:description",
+        content: "Caption Burn",
       },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "	https://www.kellybaderart.com/imgs/portrait.png",
-      },
-      {
-        hid: "og:url",
-        property: "og:url",
-        content: "https://kellybaderart.com",
-      },
+      // {
+      //   name: "og:image",
+      //   content: "https://www.kellybaderart.com/imgs/portrait.png",
+      // },
       // any other OG tags you want to add
     ],
   },
-};
+});
 </script>
 
 <template>
+  <SpeedInsights />
   <div>
     <Header />
     <UContainer>
