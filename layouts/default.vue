@@ -16,10 +16,10 @@ useHead({
         name: "og:description",
         content: "Caption Burn",
       },
-      // {
-      //   name: "og:image",
-      //   content: "https://www.kellybaderart.com/imgs/portrait.png",
-      // },
+      {
+        name: "og:image",
+        content: "https://www.captionburn.com/imgs/banner.png",
+      },
       // any other OG tags you want to add
     ],
   },
