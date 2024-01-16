@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "@nuxtjs/color-mode",
   ],
+  colorMode: {
+    preference: "dark",
+  },
   gtag: {
     id: "GTM-KPP8GM7P",
   },
