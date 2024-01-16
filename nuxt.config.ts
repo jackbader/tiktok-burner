@@ -12,11 +12,7 @@ export default defineNuxtConfig({
     preference: "dark",
   },
   gtag: {
-    id: "GTM-KPP8GM7P",
-  },
-  colorMode: {
-    preference: "dark",
-    classSuffix: "",
+    id: "G-HCC0PVBDTW",
   },
   googleFonts: {
     families: {
