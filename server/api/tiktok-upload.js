@@ -1,8 +1,10 @@
 import axios from "axios";
+export const maxDuration = 300; // This function can run for a maximum of 5 minutes
 
 export default defineEventHandler(async (req, res) => {
   console.log("tiktok upload!");
   const body = await readBody(req);
+  console.log("body", body);
   const json = await JSON.parse(body);
   console.log("url", json.url);
 

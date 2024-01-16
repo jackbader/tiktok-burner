@@ -1,4 +1,5 @@
 import Replicate from "replicate";
+export const maxDuration = 300; // This function can run for a maximum of 5 minutes
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN,
@@ -7,8 +8,9 @@ const replicate = new Replicate({
 export default defineEventHandler(async (req, res) => {
   console.log("tiktok transcribe!");
   const body = await readBody(req);
+  console.log("body", body);
   const json = await JSON.parse(body);
-  console.log("url", json.url);
+  console.log("json", json.url);
 
   if (req.method === "POST") {
     try {

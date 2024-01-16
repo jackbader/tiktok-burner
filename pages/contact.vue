@@ -53,7 +53,7 @@ function consoleHitOn() {
 
 <template>
   <h1 class="text-4xl mb-4">Contact</h1>
-  <div class="flex items-center flex-col max-w-[600px]">
+  <!-- <div class="flex items-center flex-col max-w-[600px]">
     <UForm
       :validate="validate"
       :state="state"
@@ -86,6 +86,6 @@ function consoleHitOn() {
       color="primary"
       title="Email Sent!"
       @close="consoleHitOn"
-    />
+    /> -->
   </div>
 </template>
