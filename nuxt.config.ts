@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Poppins: "200...900",
+      "Open Sans": true,
     },
   },
   ui: {
