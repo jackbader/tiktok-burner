@@ -81,7 +81,7 @@ const toggleMenu = () => {
 
 <style>
 .active {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid;
 }
 
 .header-link {
